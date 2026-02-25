@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <title>개발자 유형 테스트</title>
+</head>
+<body class="fade-in">
+  <main class="wrap">
+    <section class="card home-card">
+
+      <h1 class="home-title">
+        나의 <span class="accent">개발자</span> 유형은?
+      </h1>
+
+      <div class="hero">
+        <!-- ✅ 너가 가진 표지 이미지로 바꿔주면 됨 -->
+        <img src="{{ url_for('static', filename='img/cover.png') }}" alt="cover">
+      </div>
+
+      <p class="home-sub">
+        SSCC 개발자 유형 TEST
+      </p>
+
+      <p class="home-sub2">
+        아래 시작하기 버튼을 눌러주세요!
+      </p>
+
+      <div class="actions">
+        <a class="btn primary" href="{{ url_for('start') }}">시작하기</a>
+      </div>
+
+    </section>
+  </main>
+</body>
+</html>

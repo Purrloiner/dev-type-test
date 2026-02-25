@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <title>결과</title>
+</head>
+
+<body class="fade-in">
+  <main class="wrap">
+    <section class="card result-card">
+
+      <h1 class="result-top">나의 결과는 ?!</h1>
+      {% if result.tagline %}
+        <p class="result-tagline">{{ result.tagline }}</p>
+      {% endif %}
+
+      <div class="result-type">&lt;{{ result.title }}&gt;</div>
+
+      {% if result.image %}
+        <div class="result-hero">
+          <img src="{{ url_for('static', filename=result.image) }}" alt="result image">
+        </div>
+      {% endif %}
+
+      {% if result.points %}
+        <div class="result-points">
+          {% for p in result.points %}
+            <div class="point">
+              <div class="point-h">{{ p.headline }}</div>
+              <div class="point-d">{{ p.desc }}</div>
+            </div>
+          {% endfor %}
+        </div>
+      {% endif %}
+
+      {% if result.roadmap %}
+        <div class="roadmap">
+          <div class="roadmap-title">🔎 {{ result.roadmap_title }}</div>
+          <ul class="roadmap-list">
+            {% for item in result.roadmap %}
+              <li>✅ {{ item }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      {% endif %}
+
+      <div class="actions">
+        <a class="btn primary" href="{{ url_for('restart') }}">다시하기</a>
+      </div>
+
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <title>테스트</title>
+</head>
+<body class="fade-in">
+  <main class="wrap">
+    <section class="card">
+
+      <div class="progress-wrap">
+        <div class="pill">
+          <div class="bar" style="width: {{ progress.percent }}%"></div>
+        </div>
+        <div class="progress-text">{{ progress.current }}/{{ progress.total }}</div>
+      </div>
+
+      {% if q.image %}
+        <img class="q-img" src="{{ url_for('static', filename=q.image) }}" alt="question image">
+      {% endif %}
+
+      <h2 class="q-text">{{ q.text }}</h2>
+
+      <form id="answerForm" method="post" class="answers">
+        <input type="hidden" id="answerHidden" name="answer" value="">
+        {% for opt in q.options %}
+          <button class="opt optBtn" type="button" data-val="{{ loop.index0 }}">
+            {{ opt.text }}
+          </button>
+        {% endfor %}
+      </form>
+    </section>
+  </main>
+
+  <script src="{{ url_for('static', filename='js/page.js') }}"></script>
+</body>
+</html>
+

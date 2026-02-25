@@ -1,0 +1,313 @@
+:root{
+  --bg:#F6FFF8;              /* 아주 연한 민트 배경 */
+  --card:#ffffff;
+  --text:#111827;
+  --muted:#6b7280;
+  --line:#e5e7eb;
+  --shadow:0 18px 45px rgba(0,0,0,.06);
+
+  /* ✅ 쌈무(연두+파스텔) 포인트 */
+  --accent:#A8E6B8;          /* 메인: 연두민트(채도 낮춤) */
+  --accent-strong:#7FD79C;   /* hover: 살짝 진하게 */
+  --accent-soft:#EAFBEF;     /* 연한 배경 */
+  --accent-text:#1F7A4D;
+
+  --radius:22px;
+}
+
+*{ box-sizing:border-box; }
+html,body{ height:100%; }
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans KR", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.wrap{
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 36px 18px 60px;
+}
+
+.card{
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 34px 28px;
+}
+
+@media (max-width: 520px){
+  .card{ padding: 24px 18px; }
+}
+
+.brand{
+  text-align:center;
+  margin-bottom: 18px;
+}
+
+.brand .title{
+  font-size: 40px;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  margin: 0 0 10px;
+}
+.brand .title .accent{ color: var(--accent); }
+.brand .sub{
+  margin:0;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* home page */
+.home-card{
+  text-align:center;
+  padding-top: 38px;
+  padding-bottom: 34px;
+}
+
+.home-title{
+  margin: 0 0 18px;
+  font-size: 44px;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+}
+
+.home-sub{
+  margin: 14px 0 8px;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.home-sub2{
+  margin: 0 0 18px;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* hero 이미지 크기 */
+.hero{
+  display:flex;
+  justify-content:center;
+  margin: 10px 0 10px;
+}
+.hero img{
+  width: 340px;
+  max-width: 92%;
+  height: auto;
+}
+
+.progress-wrap{
+  margin: 0 0 18px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap: 16px;
+}
+
+/* ✅ 진행바 길게 */
+.pill{
+  flex: 1;                   /* 남는 공간 전부 사용 */
+  height: 14px;
+  background: var(--accent-soft);
+  border-radius: 999px;
+  position:relative;
+  overflow:hidden;
+}
+
+.pill .bar{
+  height:100%;
+  width:0%;
+  background: var(--accent);
+  border-radius: 999px;
+  transition: width 180ms ease;
+}
+
+.progress-text{
+  min-width: 64px;           /* 1/10 자리 확보 */
+  text-align: right;
+  color: #9ca3af;
+  font-weight: 800;
+  font-size: 18px;
+}
+
+.q-text{
+  font-size: 28px;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  line-height: 1.35;
+  text-align:center;
+  margin: 18px 0 22px;
+}
+
+@media (max-width: 520px){
+  .q-text{ font-size: 22px; }
+}
+
+.q-img{
+  width: 320px;
+  max-width: 100%;
+  margin: 0 auto 12px;
+  display:block;
+  border-radius: 16px;
+}
+
+.answers{
+  display: grid;
+  gap: 14px;
+  margin-top: 12px;
+}
+
+.opt{
+  width: 100%;
+  border: 1px solid var(--line);
+  background: #fff;
+  border-radius: 16px;
+  padding: 18px 18px;
+  font-size: 18px;
+  font-weight: 800;
+  text-align: left;
+  cursor: pointer;
+  transition: transform 80ms ease, box-shadow 120ms ease, border-color 120ms ease;
+}
+
+.opt:hover{
+  border-color: #d1d5db;
+  box-shadow: 0 10px 25px rgba(17,24,39,.06);
+}
+
+.opt:active{
+  transform: scale(0.99);
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding: 14px 18px;
+  border-radius: 14px;
+  border: 2px solid var(--accent);
+  background: #fff;
+  color: var(--accent);
+  font-weight: 900;
+  text-decoration:none;
+  min-width: 180px;
+}
+
+.btn.primary{
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+  box-shadow: 0 12px 24px rgba(255,159,26,.25);
+}
+
+.actions{
+  display:flex;
+  justify-content:center;
+  margin-top: 22px;
+}
+
+.result-card{ text-align:center; }
+
+.result-top{
+  font-size: 36px;
+  font-weight: 900;
+  margin: 0 0 6px;
+  letter-spacing: -0.03em;
+}
+
+.result-tagline{
+  margin: 0 0 10px;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.result-type{
+  font-size: 24px;
+  font-weight: 900;
+  margin: 0 0 18px;
+}
+
+.result-hero{
+  display:flex;
+  justify-content:center;
+  margin: 10px 0 20px;
+}
+.result-hero img{
+  width: 260px;
+  max-width: 90%;
+  height: auto;
+}
+
+.result-points{
+  text-align:left;
+  display:grid;
+  gap: 18px;
+  margin: 0 auto 18px;
+  max-width: 640px;
+}
+
+.point-h{
+  font-weight: 900;
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+
+.point-d{
+  color: var(--muted);
+  line-height: 1.7;
+  font-weight: 600;
+}
+
+.roadmap{
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+
+.roadmap-title{
+  font-weight: 900;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.roadmap-list{
+  list-style:none;
+  padding:0;
+  margin:0;
+  display:grid;
+  gap: 8px;
+  color: var(--muted);
+  font-weight: 700;
+}
+.taglist{
+  display:flex;
+  gap: 10px;
+  flex-wrap:wrap;
+  justify-content:center;
+  padding:0;
+  margin: 0 0 10px;
+  list-style:none;
+}
+.taglist li{
+  background: var(--accent-soft);
+  color: #b45309;
+  border-radius: 999px;
+  padding: 8px 12px;
+  font-weight: 800;
+}
+
+/* page transition */
+.fade-in { animation: fadeIn 120ms ease-out; }
+.fade-out { animation: fadeOut 120ms ease-in forwards; }
+@keyframes fadeIn{
+  from{ opacity:0; transform: translateY(6px); }
+  to{ opacity:1; transform: translateY(0); }
+}
+@keyframes fadeOut{
+  from{ opacity:1; transform: translateY(0); }
+  to{ opacity:0; transform: translateY(-6px); }
+}
