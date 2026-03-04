@@ -13,7 +13,7 @@ QUESTIONS = [
     "text": "강의실에 도착해 노트북을 꺼냈다! 배경화면 상태는?",
     "image": "img/q1.png",
     "options": [
-        {"text": "폴더별로 완벽 정리!", "add": {"frontend": 2, "mobile": 1}},
+        {"text": "폴더별로 완벽 정리!", "add": {"frontend": 2, "mobile": 1, "fullstack": 1}},
         {"text": "기본 배경화면 혹은 터미널 창만 띄워져 있음", "add": {"backend": 2, "embedded": 1}},
         {"text": "직접 만든 배경화면이나 게임 일러스트", "add": {"game": 2, "data_ai": 1}}
     ]
@@ -25,7 +25,7 @@ QUESTIONS = [
     "options": [
         {"text": "버튼 위치나 결제 UI가 구려서 터진 게 분명하다고 분석한다", "add": {"frontend": 2, "mobile": 1}},
         {"text": "내부 DB 통신 오류인가? 서버 터진 건지 궁금해한다", "add": {"backend": 2, "fullstack": 2}},
-        {"text": "이거 뜯어보면 기판이 어떻게 생겼을지 궁금해한다", "add": {"embedded": 2, "game": 2}}
+        {"text": "이거 뜯어보면 기판이 어떻게 생겼을지 궁금해한다", "add": {"embedded": 2, "game": 1}}
     ]
 },
 
@@ -33,7 +33,7 @@ QUESTIONS = [
     "text": "공강 시간에 게임을 한다면 어떤 스타일?",
     "image": "img/q6.png",
     "options": [
-        {"text": "화려한 그래픽과 타격감이 살아있는 액션 게임", "add": {"game": 2, "frontend": 1}},
+        {"text": "화려한 그래픽과 타격감이 살아있는 액션 게임", "add": {"game": 2, "frontend": 2}},
         {"text": "철저한 빌드업과 자원 관리가 중요한 전략 게임", "add": {"backend": 1, "data_ai": 2, "embedded": 1}},
         {"text": "장소 불문! 폰으로 가볍게 즐기는 모바일 게임", "add": {"mobile": 2, "fullstack": 1}}
     ]
@@ -43,7 +43,7 @@ QUESTIONS = [
     "text": "교수님이 '자유 주제' 과제를 내주셨다. 당신은?",
     "image": "img/q7.png",
     "options": [
-        {"text": "사람들이 실제로 써보고 '와!' 할 만한 서비스 기획", "add": {"frontend": 1, "fullstack": 1, "mobile": 2}},
+        {"text": "사람들이 실제로 써보고 '와!' 할 만한 서비스 기획", "add": {"frontend": 1, "fullstack": 2, "mobile": 2}},
         {"text": "최신 딥러닝 모델을 돌려서 결과 뽑아보기", "add": {"data_ai": 2}},
         {"text": "기존 시스템의 성능을 2배로 올리는 최적화 실험", "add": {"backend": 1, "embedded": 2}}
     ]
@@ -54,7 +54,7 @@ QUESTIONS = [
     "image": "img/q9.png",
     "options": [
         {"text": "스택오버플로우의 답변 코드를 일단 복붙해서 돌려본다", "add": {"fullstack": 2, "mobile": 1, "game": 2}},
-        {"text": "공식 문서(Documentation)를 처음부터 정독한다", "add": {"backend": 1, "embedded": 2}},
+        {"text": "공식 문서(Documentation)를 처음부터 정독한다", "add": {"backend": 1, "embedded": 1}},
         {"text": "왜 안되는지 데이터 로그를 끝까지 추적한다", "add": {"data_ai": 2, "backend": 1}}
     ]
 },
