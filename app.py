@@ -8,108 +8,68 @@ TYPES = ["frontend", "backend", "fullstack", "mobile", "game", "embedded", "data
 
 # 2. 질문 데이터 (작성해주신 질문들 유지)
 QUESTIONS = [
-    {
-        "text": "강의실에 도착해 노트북을 꺼냈다! 배경화면 상태는?",
-        "image": "img/q1.png",
-        "options": [
-            {"text": "폴더별로 완벽 정리!", "add": {"frontend": 2, "mobile": 1}},
-            {"text": "기본 배경화면 혹은 터미널 창만 띄워져 있음", "add": {"backend": 2, "embedded": 1}},
-            {"text": "직접 만든 배경화면이나 게임 일러스트", "add": {"game": 2, "data_ai": 1}}
-        ]
-    },
-    {
-        "text": "옆자리 동기가 아주 느린 구형 노트북으로 낑낑대고 있다면?",
-        "image": "img/q2.png",
-        "options": [
-            {"text": "램 부족인가? 백그라운드 프로세스를 다 꺼준다", "add": {"embedded": 2, "backend": 1}},
-            {"text": "요즘은 클라우드 환경이 좋으니 웹에서 하라고 제안한다", "add": {"frontend": 1, "fullstack": 1}},
-            {"text": "이참에 아이패드나 최신 폰으로 하는 앱을 추천해준다", "add": {"mobile": 2}}
-        ]
-    },
-    {
-        "text": "동아리 홍보 포스터를 봤다. 가장 눈길이 가는 문구는?",
-        "image": "img/q3.png",
-        "options": [
-            {"text": "\"누구나 눈이 번쩍 뜨일 화려한 결과물을 만듭니다!\"", "add": {"frontend": 2, "game": 2}},
-            {"text": "\"보이지 않는 곳에서 세상을 움직이는 엔진이 됩니다.\"", "add": {"backend": 2, "embedded": 1}},
-            {"text": "\"데이터 속에서 미래를 예측하는 마법사가 됩니다.\"", "add": {"data_ai": 2, "fullstack": 2}}
-        ]
-    },
-    {
-        "text": "점심시간, 학생식당 키오스크 한 대가 고장 나있다. 당신의 반응은?",
-        "image": "img/q4.png",
-        "options": [
-            {"text": "버튼 위치나 결제 UI가 구려서 터진 게 분명하다고 분석한다", "add": {"frontend": 2, "mobile": 1}},
-            {"text": "내부 DB 통신 오류인가? 서버 터진 건지 궁금해한다", "add": {"backend": 2, "fullstack": 2}},
-            {"text": "이거 뜯어보면 기판이 어떻게 생겼을지 궁금해한다", "add": {"embedded": 2, "game": 2}}
-        ]
-    },
-    {
-        "text": "팀플 시작! 내가 맡고 싶은 역할은?",
-        "image": "img/q5.png",
-        "options": [
-            {"text": "발표 자료와 PPT 디자인 (사용자가 볼 모든 것)", "add": {"frontend": 2, "mobile": 2}},
-            {"text": "자료 조사와 전체적인 논리 구조 짜기 (내부 로직)", "add": {"backend": 1, "data_ai": 2}},
-            {"text": "팀장 맡아서 그냥 내가 다 해버리기 (전체 총괄)", "add": {"fullstack": 2}}
-        ]
-    },
-    {
-        "text": "공강 시간에 게임을 한다면 어떤 스타일?",
-        "image": "img/q6.png",
-        "options": [
-            {"text": "화려한 그래픽과 타격감이 살아있는 액션 게임", "add": {"game": 2, "frontend": 1}},
-            {"text": "철저한 빌드업과 자원 관리가 중요한 전략 게임", "add": {"backend": 1, "data_ai": 2, "embedded": 1}},
-            {"text": "장소 불문! 폰으로 가볍게 즐기는 모바일 게임", "add": {"mobile": 2, "fullstack": 1}}
-        ]
-    },
-    {
-        "text": "교수님이 '자유 주제' 과제를 내주셨다. 당신은?",
-        "image": "img/q7.png",
-        "options": [
-            {"text": "사람들이 실제로 써보고 '와!' 할 만한 서비스 기획", "add": {"frontend": 1, "fullstack": 1, "mobile": 2}},
-            {"text": "최신 딥러닝 모델을 돌려서 결과 뽑아보기", "add": {"data_ai": 2}},
-            {"text": "기존 시스템의 성능을 2배로 올리는 최적화 실험", "add": {"backend": 1, "embedded": 2}}
-        ]
-    },
-    {
-        "text": "술자리에서 안주를 고를 때 당신의 기준은?",
-        "image": "img/q8.png",
-        "options": [
-            {"text": "인스타에 올리기 좋은 비주얼이 예쁜 안주", "add": {"frontend": 2, "mobile": 1}},
-            {"text": "가성비 좋고 든든해서 배를 확실히 채워주는 안주", "add": {"backend": 1, "embedded": 1, "fullstack": 1}},
-            {"text": "매번 먹던 거 말고, 처음 보는 특이한 퓨전 안주", "add": {"game": 2, "data_ai": 2}}
-        ]
-    },
-    {
-        "text": "과제가 막혔다! 구글링을 하던 중 당신의 스타일은?",
-        "image": "img/q9.png",
-        "options": [
-            {"text": "스택오버플로우의 답변 코드를 일단 복붙해서 돌려본다", "add": {"fullstack": 2, "mobile": 1, "game": 2}},
-            {"text": "공식 문서(Documentation)를 처음부터 정독한다", "add": {"backend": 1, "embedded": 2}},
-            {"text": "왜 안되는지 데이터 로그를 끝까지 추적한다", "add": {"data_ai": 2, "backend": 1}}
-        ]
-    },
-    {
+
+{
+    "text": "강의실에 도착해 노트북을 꺼냈다! 배경화면 상태는?",
+    "image": "img/q1.png",
+    "options": [
+        {"text": "폴더별로 완벽 정리!", "add": {"frontend": 2, "mobile": 1}},
+        {"text": "기본 배경화면 혹은 터미널 창만 띄워져 있음", "add": {"backend": 2, "embedded": 1}},
+        {"text": "직접 만든 배경화면이나 게임 일러스트", "add": {"game": 2, "data_ai": 1}}
+    ]
+},
+
+{
+    "text": "점심시간, 학생식당 키오스크 한 대가 고장 나있다. 당신의 반응은?",
+    "image": "img/q4.png",
+    "options": [
+        {"text": "버튼 위치나 결제 UI가 구려서 터진 게 분명하다고 분석한다", "add": {"frontend": 2, "mobile": 1}},
+        {"text": "내부 DB 통신 오류인가? 서버 터진 건지 궁금해한다", "add": {"backend": 2, "fullstack": 2}},
+        {"text": "이거 뜯어보면 기판이 어떻게 생겼을지 궁금해한다", "add": {"embedded": 2, "game": 2}}
+    ]
+},
+
+{
+    "text": "공강 시간에 게임을 한다면 어떤 스타일?",
+    "image": "img/q6.png",
+    "options": [
+        {"text": "화려한 그래픽과 타격감이 살아있는 액션 게임", "add": {"game": 2, "frontend": 1}},
+        {"text": "철저한 빌드업과 자원 관리가 중요한 전략 게임", "add": {"backend": 1, "data_ai": 2, "embedded": 1}},
+        {"text": "장소 불문! 폰으로 가볍게 즐기는 모바일 게임", "add": {"mobile": 2, "fullstack": 1}}
+    ]
+},
+
+{
+    "text": "교수님이 '자유 주제' 과제를 내주셨다. 당신은?",
+    "image": "img/q7.png",
+    "options": [
+        {"text": "사람들이 실제로 써보고 '와!' 할 만한 서비스 기획", "add": {"frontend": 1, "fullstack": 1, "mobile": 2}},
+        {"text": "최신 딥러닝 모델을 돌려서 결과 뽑아보기", "add": {"data_ai": 2}},
+        {"text": "기존 시스템의 성능을 2배로 올리는 최적화 실험", "add": {"backend": 1, "embedded": 2}}
+    ]
+},
+
+{
+    "text": "과제가 막혔다! 구글링을 하던 중 당신의 스타일은?",
+    "image": "img/q9.png",
+    "options": [
+        {"text": "스택오버플로우의 답변 코드를 일단 복붙해서 돌려본다", "add": {"fullstack": 2, "mobile": 1, "game": 2}},
+        {"text": "공식 문서(Documentation)를 처음부터 정독한다", "add": {"backend": 1, "embedded": 2}},
+        {"text": "왜 안되는지 데이터 로그를 끝까지 추적한다", "add": {"data_ai": 2, "backend": 1}}
+    ]
+},
+
+{
     "text": "드디어 종강! 당신이 꿈꾸는 완벽한 방학 생활은?",
     "image": "img/q10.png",
     "options": [
-        {
-            "text": "요즘 뜨는 핫플레이스 투어! 예쁜 사진 찍어서 SNS에 기록하기", 
-            "add": {"frontend": 2, "mobile": 2, "fullstack": 1}
-        },
-        {
-            "text": "방에 틀어박혀 나만의 취미에 몰두하기", 
-            "add": {"backend": 1, "embedded": 2, "data_ai": 2}
-        },
-
-        {
-            "text": "현실은 잊는다! 게임하며 밤새기", 
-            "add": {"game": 2, "fullstack": 1}
-        }
+        {"text": "요즘 뜨는 핫플레이스 투어! 예쁜 사진 찍어서 SNS에 기록하기", "add": {"frontend": 2, "mobile": 2, "fullstack": 1}},
+        {"text": "방에 틀어박혀 나만의 취미에 몰두하기", "add": {"backend": 1, "embedded": 2, "data_ai": 2}},
+        {"text": "현실은 잊는다! 게임하며 밤새기", "add": {"game": 2, "fullstack": 1}}
     ]
 }
-]
 
+]
 # 3. 결과 데이터
 RESULTS = {
   "frontend": {
